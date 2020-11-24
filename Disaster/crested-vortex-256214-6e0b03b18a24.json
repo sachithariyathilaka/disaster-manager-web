@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "crested-vortex-256214",
+  "private_key_id": "6e0b03b18a245d03fa4d635d8f07fe76f0d987b2",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCz3yxJTtaUmXOZ\n7airbSD4ZGDE7JgcxgzGhbF/3FFhSxoSp66IFQeiqklBOROgsdiYUPdUHdPJ0E2N\nSb9wJ8xnnQcxd0ZzzIAJkW1jtqWxXalQTohAztqh/i+TpN5DhjvpFs27+lwDDDo4\nDR15xiwVlG1Nto9tWD7cTZcfK2spYOlFrXq+P+G5RetQXmg5FQDRyy9v0TebxQjY\niH8oElnAtBP5u4eEnS3/sHKHGzTu9F+L6M65HvGSAkum1xGu76j366iJTo3R8M8X\nXiIoPAZuRWCAehWBqp7hLnZFdr566pNCcn6K2BPuLFmhO+zjPAhN+VSoSd9freQh\nUFzxJow/AgMBAAECggEAR8YK3um1mDAvP8HkpxrxqAwtzQZ3oCurF2BrtpCMbJ1S\nNxVwAF8b393BQ2RqH5o3ynesaYVJaGNVPsapvDA1UTcIksV8eGKmyKqeEsbkEQVF\ntYTQu8OO3EsYYvrLsfgTWew+hf7dzl2HsawSEfBw0N+cSgFJ9CDdXH0di1OA/E5C\nEHSTawYQX5+vMm3PAKUASekZ2tVpwPBzMYpQ+4WSw6YXXS7k4OnykJA6SCqHyvUv\nKwwH60EiNiBSCFVxuFx/WUko2bOnF7xaoMaaz73Tkxmf8USv/vgX3vBxxQGDPDuw\nXJmZw5Z2aW8LXm1FfopCJUJhhQ+YuH0IxnLJx0yGmQKBgQDwIjxsHfYbGOv5gdfe\nJXAvNPUw8opIIwdqUux6NdAfxepEp6Tv3Wjb5sCT7klt7LlD6gzIP2RPiIC94S8I\n5haDpanypNQ9361oZ/d/WJFa40vLgl1G3RoSXpU/m+X07/mm2pmkACtwtcYsPtJv\ndJvrkGQDdbHsHGTABwwkXcGrQwKBgQC/waFl306WnOeqgBf3CXkDKDtTUHWEWAhb\n9uznN8HdyqfexniBHrvCwemCC4hFGZQe7dKPMyrQVARbXE8eGQe+5eJXgWKz16RN\nRVdjZwrMROu1zDDS4Asm0Y5Po+eTrLmHnzm8HV1kqGxlOk8PQ+NFG0gDY1BS9lMa\nnK8PKAglVQKBgQCSZhz2QVHwdUIwTHPh8GszrJKrc8LQdeKodMPNQg+Pv2ay0o4g\n2ph6MHVJ+uVzifXtLLz8PIGYZ30txiKZx0UEn7Q7xTfMPRkIZRIj5kg/5AEqomDh\nuhySBG3zaMVKjh9jFTTEIoJZZcja4rYC01HXzKDc5x1A+JKH7AQAC9Tt5wKBgQCz\n8EU9zTB30MDrk8vpOvBdcBFLewLrr5gYhDuGNSIsuBCS0fceYvKaLVCrgZrcDMab\nx1uAmOkiGNUFzjdH7QEBt8KPjpBKZp59DAaW9oiBamMtc3CVUTvlr1s1jH6warKm\ne1m4Fm4fGJSu4OpzTqcjoBgRZc5oK1GMdV8of841CQKBgHD4uwI0p7ZRAJsGlqZj\nIyh+UbwH+uy15shqq0VcYRf4kifSbpiiSvTR9ehJcvXaGupQ7IKf2K0icyQAKSa0\nuAYSBvB2jta38isPwkqO/wuF2Mo8JQnMEOfN1hMQwdmkcErPo1ICLeryh0wEwCtM\nV8FbOX4uzMNWKX4vOdFbdTA/\n-----END PRIVATE KEY-----\n",
+  "client_email": "predictionai@crested-vortex-256214.iam.gserviceaccount.com",
+  "client_id": "104348206251162151670",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/predictionai%40crested-vortex-256214.iam.gserviceaccount.com"
+}
