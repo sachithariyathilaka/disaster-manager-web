@@ -1,2 +1,6 @@
 # Disaster Web App
-Disaster Manger Web App using Angular js &amp; PHP
+Disaster manager web application
+
+# Technologies
+
+Angular JS, PHP, MYSQL
