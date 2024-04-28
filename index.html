@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <title>Disaster Management Center</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script src="angular.js"></script>
+    <script src="angular-route.js"></script>
+  </head>
+  <body>
+    <script type="text/javascript">
+    var app=angular.module("app",['ngRoute']);
+
+    app.config(function($routeProvider)
+    {
+      $routeProvider
+      .when('/',
+      {
+        templateUrl: 'login.html',
+        controller: 'loginCntl'
+      })
+      .when('/main',{
+        templateUrl: 'dashboard.html',
+        controller: 'homecntl'
+      })
+      .when('/prediction', {
+        templateUrl: 'prediction.html',
+        controller: 'predictionCntl'
+      })
+      .when('/classification', {
+        templateUrl: 'classify.html',
+        controller: 'classifyCntl'
+      })
+      .when('/hospital', {
+        templateUrl: 'hospital.html',
+        controller:'hospitalCntl'
+      })
+      .when('/details', {
+        templateUrl: 'details.html',
+        controller: 'detailsCntl'
+      })
+      .otherwise({
+        template: '404'
+      });
+    });
+
+    app.controller('loginCntl', function($scope,$location){
+      $scope.login = function(){
+        var username = $scope.Username;
+        var password = $scope.Password;
+        if(username == 'admin' && password == 'admin'){
+          alert('Login Succusfull!!');
+          $location.path('/main');
+        }
+        else{
+          alert('Error Occured!!');
+      }
+    }
+
+    });
+
+    app.controller('homecntl', function($scope,$http,$location){
+      $http({
+        method: 'GET',
+        url: 'http://18.216.245.34/Disaster/predict.php'
+      }).then(function(response2) {
+        $scope.users = response2.data;
+      });
+
+      $scope.all = function(){
+        $location.path('/main');
+      }
+
+      $scope.classify = function(){
+        $location.path('/classification');
+      }
+
+      $scope.goToPrediction = function(){
+        $location.path('/prediction');
+      }
+    });
+
+    app.controller('predictionCntl', function($scope,$http,$location){
+      $scope.searchRecord=function(){
+        var RequestID=$scope.RequestID;
+        $http({
+      method  : 'GET',
+      url     : 'http://18.216.245.34/Disaster/record.php?RequestID='+RequestID
+     }).then(function(response) {
+          $scope.users = response.data;
+        });
+      };
+
+    });
+
+    app.controller('classifyCntl', function($scope,$http,$location){
+      $scope.all = function(){
+        $location.path('/main');
+      }
+
+      $scope.classify = function(){
+        $location.path('/classification');
+      }
+      $http({
+        method: 'GET',
+        url: 'http://18.216.245.34/Disaster/count.php'
+      }).then(function(response) {
+        $scope.count = response.data;
+      });
+    });
+    app.controller('hospitalCntl', function($scope,$http,$location){
+      $scope.all = function(){
+        $location.path('/main');
+      }
+      $http({
+        method: 'GET',
+        url: 'http://18.216.245.34/Disaster/predict.php'
+      }).then(function(response) {
+        $scope.datalist = response.data;
+      });
+
+      $scope.goToPrediction = function(){
+        $location.path('/details');
+      }
+
+    });
+
+    app.controller('detailsCntl', function($scope,$location,$http){
+      $scope.searchRecord=function(){
+        var RequestID=$scope.RequestID;
+        $http({
+      method  : 'GET',
+      url     : 'http://18.216.245.34/Disaster/record.php?RequestID='+RequestID
+     }).then(function(response) {
+          $scope.users = response.data;
+        });
+      };
+
+      $scope.response = function(){
+        var RequestID=$scope.RequestID;
+        $http({
+      method  : 'GET',
+      url     : 'http://18.216.245.34/Disaster/response.php?id='+RequestID
+     }).then(function(response) {
+          alert('Response Done!!');
+        });
+      }
+
+      $scope.delete = function(){
+        var RequestID=$scope.RequestID;
+        $http({
+      method  : 'GET',
+      url     : 'http://18.216.245.34/Disaster/delete.php?id='+RequestID
+     }).then(function(response) {
+          alert('Request Deleted!!');
+        });
+      }
+    });
+    </script>
+    <div ng-view id="mainContent"></div>
+  </body>
+</html>

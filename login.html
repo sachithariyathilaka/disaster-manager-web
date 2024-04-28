@@ -1,0 +1,20 @@
+<div class="card text-white bg-secondary mb-3" id="template" style="	width: 350px; height: auto; margin: 150px auto; border-radius: 10px; padding: 0 50px; padding-bottom: 30px;">
+  <div class="display-3" id="login">
+    <img src="images/admin.svg" class="img" style="width: 30px;height:30px;">
+    <h4>Admin Login</h4>
+  </div>
+  <form id="myform" name="loginForm">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Username</label>
+      <input type="text" class="form-control" id="Username" aria-describedby="emailHelp" placeholder="Enter Username" name="Username" ng-model="Username" required>
+    </div>
+    <div ng-show="loginForm.Username.$touched && loginForm.Username.$invalid"></div>
+    <div class="form-group">
+      <label for="exampleInputPassword">Password</label>
+      <input type="password" class="form-control" id="Password" placeholder="Password" name="Password" ng-model="Password" required>
+    </div>
+    <div ng-show="loginForm.Password.$touched && loginForm.Password.$invalid"></div>
+    <span id="message"></span>
+    <button type="submit" class="btn btn-primary" id="loginBtn" ng-disabled="loginForm.$invalid" ng-click="login()">Login</button>
+  </form>
+</div>
